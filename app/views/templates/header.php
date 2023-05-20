@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="<?= BASEURL; ?>/css/bootstrap.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
-    <title><?= $data["judul"]; ?></title>
+    <title>PHP MVC | <?= $data["judul"]; ?></title>
 </head>
 
 <body>
@@ -20,9 +20,9 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav ms-auto mb-2 mb-lg-0">
-                    <a class="nav-link active mx-3" aria-current="page" href="<?= BASEURL; ?>">Home</a>
-                    <a class="nav-link active mx-3" href="<?= BASEURL; ?>/mahasiswa">Mahasiswa</a>
-                    <a class="nav-link active mx-3" href="<?= BASEURL; ?>/about">About</a>
+                    <a class="nav-link <?= ($data['judul'] === 'Home') ? 'active' : '' ?> mx-3" aria-current="page" href="<?= BASEURL; ?>">Home</a>
+                    <a class="nav-link <?= ($data['judul'] === 'Mahasiswa') ? 'active' : '' ?> mx-3" href="<?= BASEURL; ?>/mahasiswa">Mahasiswa</a>
+                    <a class="nav-link <?= ($data['judul'] === 'About me') ? 'active' : '' ?> mx-3" href="<?= BASEURL; ?>/about">About</a>
                 </div>
             </div>
         </div>
